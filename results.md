@@ -29,3 +29,13 @@ Submitting deposit...
 Transaction hash: 0x7628ff86c844d4de90bfbf19f481f6830d78df341a0e3cc84ba8391943304d40
 Your new encrypted balance (decrypted for view): 500
 ```
+
+AFTER DEPOSIT BALANCE CHECK
+
+```bash
+Using PiggyBank at 0xFcF11aFF1C5152220a43b3bBE2f002075A36d39C on eth-sepolia
+Checking balance for account: 0xCD30EA918A09FbdCB7421f5227d5eEB97fBBC25c
+Encrypted balance handle: 0x35ccb83b458aa0a4e051aa2ea332ca267fc4a3a1993efc3109f1014b923d0500
+Decrypting balance off-chain with your wallet permit...
+Your current balance is: 500
+```
