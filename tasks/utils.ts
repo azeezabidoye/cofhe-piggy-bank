@@ -4,6 +4,7 @@ import { HardhatRuntimeEnvironment } from 'hardhat/types'
 import { HardhatEthersSigner } from '@nomicfoundation/hardhat-ethers/signers'
 import { createCofheConfig, createCofheClient as createCofheClientBase } from '@cofhe/sdk/node'
 import { getChainById } from '@cofhe/sdk/chains'
+import type { CofheClient } from '@cofhe/sdk'
 
 const DEPLOYMENTS_DIR = path.join(__dirname, '../deployments')
 
@@ -38,7 +39,7 @@ export const getDeployment = (network: string, contractName: string): string | n
 	return deployments[contractName] || null
 }
 
-export const createCofheClient = async (hre: HardhatRuntimeEnvironment, signer: HardhatEthersSigner) => {
+export const createCofheClient = async (hre: HardhatRuntimeEnvironment, signer: HardhatEthersSigner): Promise<CofheClient> => {
 	const chainId = Number((await signer.provider.getNetwork()).chainId)
 	const chain = getChainById(chainId)
 
