@@ -72,7 +72,9 @@ contract PiggyBank {
     // Reads the on-chain decryption result after the 3-step flow is complete.
     // Reverts if revealBalance has not been called yet.
     function getDecryptedBalance() external view returns (uint256) {
-        (uint256 value, bool decrypted) = FHE.getDecryptResultSafe(balances[msg.sender]);
+        (uint256 value, bool decrypted) = FHE.getDecryptResultSafe(
+            balances[msg.sender]
+        );
         if (!decrypted) revert("Balance is not ready");
         return value;
     }
