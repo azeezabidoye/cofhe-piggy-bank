@@ -64,7 +64,6 @@ const config: HardhatUserConfig = {
     apiKey: {
       "eth-sepolia": ETHERSCAN_API_KEY || "",
       "arb-sepolia": ARBISCAN_API_KEY || "",
-      "base-sepolia": BASESCAN_API_KEY || "",
     },
   },
 };
