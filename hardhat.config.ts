@@ -56,7 +56,6 @@ const config: HardhatUserConfig = {
       chainId: 84532,
       gasMultiplier: 1.2,
       timeout: 60000,
-      httpHeaders: {},
     },
   },
 
