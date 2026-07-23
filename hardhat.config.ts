@@ -40,7 +40,6 @@ const config: HardhatUserConfig = {
       chainId: 11155111,
       gasMultiplier: 1.2,
       timeout: 60000,
-      httpHeaders: {},
     },
     "arb-sepolia": {
       url: ARBITRUM_SEPOLIA_RPC_URL || "https://sepolia-rollup.arbitrum.io/rpc",
@@ -48,7 +47,6 @@ const config: HardhatUserConfig = {
       chainId: 421614,
       gasMultiplier: 1.2,
       timeout: 60000,
-      httpHeaders: {},
     },
     "base-sepolia": {
       url: BASE_SEPOLIA_RPC_URL || "https://sepolia.base.org",
