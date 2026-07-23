@@ -12,7 +12,7 @@ contract PiggyBank {
 
     // Creates an encrypted zero balance for a first-time user so subsequent
     // FHE operations have a valid ciphertext to work on.
-    function _ensureInitialized() internal {
+    function _ensureInitialized() internal `{
         if (!initialized[msg.sender]) {
             balances[msg.sender] = FHE.asEuint64(0);
             FHE.allowThis(balances[msg.sender]);
