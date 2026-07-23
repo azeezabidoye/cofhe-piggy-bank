@@ -21,7 +21,9 @@ task("check-balance", "Decrypt and display your PiggyBank balance").setAction(
       return;
     }
 
-    console.log(`Using PiggyBank at ${piggyBankAddress} on ${network.name}`);
+    console.log(
+      `Using PiggyBank at ${piggyBankAddress} on ${network.name} network`,
+    );
 
     const [signer] = await ethers.getSigners();
     console.log(`Checking balance for account: ${signer.address}`);
