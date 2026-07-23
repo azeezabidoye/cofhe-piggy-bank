@@ -60,12 +60,7 @@ const config: HardhatUserConfig = {
     },
   },
 
-  etherscan: {
-    apiKey: {
-      "eth-sepolia": ETHERSCAN_API_KEY || "",
-      "arb-sepolia": ARBISCAN_API_KEY || "",
-    },
-  },
+  etherscan: {},
 };
 
 export default config;
